@@ -24,10 +24,68 @@
 	
       <div class="h-entry">
 		
+			<h1><a href="https://vincode.io/2021/11/01/shortcuts-for-microblog.html">Shortcuts for Micro.blog</a></h1>
+		
+
+        <a href="https://vincode.io/2021/11/01/shortcuts-for-microblog.html" class="u-url"><time class="dt-published" datetime="2021-11-01 20:16:12 -0500">Nov 1, 2021</time></a>
+
+        <div class="e-content">
+         	
+
+<h2 id="announcing-humboldt">Announcing Humboldt</h2>
+
+<p><a href="https://github.com/vincode-io/Humboldt">Humboldt</a> is a new Open Source project I put together so that I could use <a href="https://support.apple.com/guide/shortcuts/welcome/ios">Shortcuts</a> to post to <a href="https://micro.blog">Micro.blog</a>. Humboldt is built on top of <a href="https://github.com/microdotblog/snippets">Snippets</a> from Micro.blog, which does the heavy lifting. Humboldt only exposes a small portion of Snippets, so there is room for Humboldt to grow in the future if there is demand for more functionality.</p>
+
+<p><a href="https://apps.apple.com/us/app/humboldt/id1592768206">Humboldt is available for both macOS and iOS in the App Store</a>.</p>
+
+<h2 id="the-main-humboldt-app">The Main Humboldt App</h2>
+
+<p>The main app walks you though the usual Micro.blog sign-on flow. You just enter the email address you use for Micro.blog and wait for your sign-on email to arrive. When it does you just click a link in the email and you will be routed back to Humboldt which completes the sign-on for you. That’s all the main app does. You are now ready to begin building Shortcuts that communicate to Micro.blog.</p>
+
+<h2 id="post-html-to-micro-blog">Post HTML to Micro.blog</h2>
+
+<p>The main shortcut to use is the Post HTML one. You can submit just a short HTML snippet or a full blog post. The Title is an optional parameter, since lots of Micro.blog posts are short and don’t require them.</p>
+
+<p><a href="https://www.icloud.com/shortcuts/8d0c34942cee4770a86a79e76def1aeb">Here</a> is a simple Shortcut that just asks for what you want to post and then does it. You can use this Shortcut completely hands free to post to Micro.blog.</p>
+
+<p><img src="https://vincode.io/uploads/2021/6aa652fd04.png" alt="" />￼</p>
+
+<h2 id="upload-image-to-micro-blog">Upload Image to Micro.blog</h2>
+
+<p>You can also upload image resources to Micro.blog. <a href="https://www.icloud.com/shortcuts/fedaf0ef3ded419196c37347e7575ae3">This Shortcut example</a> shows it in action.
+<img src="https://vincode.io/uploads/2021/b5e3db9ee5.png" alt="" />￼</p>
+
+<h2 id="get-blog-id-from-micro-blog">Get Blog ID from Micro.blog</h2>
+
+<p>This is useful if you have multiple Micro.blog blogs associated with your account. You can pass the result of this action to either Post HTML for Upload Image to work with the blog you want. Otherwise, those actions work on the currently selected default blog. You can change the current default blog using Micro.blog on the web.</p>
+
+<h2 id="putting-them-together">Putting Them Together</h2>
+
+<p>You can upload blog posts with images embedded in them. In fact, that is how this blog post was uploaded to Micro.blog!</p>
+
+<p>The Upload Image action has an output parameter. It is the published URL of the image. You need to save this for each image you upload and pass it to a step that manipulates the HTML of the post you will upload.</p>
+
+<p>Your HTML needs to have placeholder text, unique to each image, that can be searched for. This placeholder text needs to be substituted for the image’s published URL. You can use the Replace Text built-in Shortcut action to do this. Now you can use Post HTML to post your updated blog HTML.</p>
+
+<h2 id="zavala-integration">Zavala Integration</h2>
+
+<p>I wanted the ability to build a blog post in <a href="https://zavala.vincode.io">Zavala</a> and then post it to Micro.blog. This is the original reason why I built Humboldt. Shortcut support for Zavala is “coming soon”, which is needed to tie everything together. When it is released to testing, I will post more about how to make Humboldt work with Zavala.</p>
+
+<h2 id="future-updates">Future Updates</h2>
+
+<p>For now, Humboldt does everything I need it to do. It just posts to Micro.blog and that is about it. It can’t edit or delete posts or manipulate image uploads. You can use the Micro.blog website for that or a full featured blog editor like <a href="https://redsweater.com/marsedit/">MarsEdit</a>.</p>
+
+<p>If there is community interest in expanding what Humboldt can do, I’m interested in hearing about it. Let me know what you would like to see on the <a href="https://github.com/vincode-io/Humboldt/discussions">Humboldt’s GitHub Discussions site</a>.</p>
+
+        </div>
+      </div>
+    
+      <div class="h-entry">
+		
 			<h1><a href="https://vincode.io/2021/10/17/drummer.html">Drummer</a></h1>
 		
 
-        <a href="https://vincode.io/2021/10/17/drummer.html" class="u-url"><time class="dt-published" datetime="2021-10-17 13:49:24 -0500">Oct 17, 2021</time></a>
+        <a href="https://vincode.io/2021/10/17/drummer.html" class="u-url"><time class="dt-published" datetime="2021-10-17 13:49:00 -0500">Oct 17, 2021</time></a>
 
         <div class="e-content">
          	
@@ -52,7 +110,7 @@
 
 <p>As part of Zavala 2.0, I wanted to satisfy the blog using an outline use case. In fact, this blog post is written using Zavala.
 <img src="https://vincode.io/uploads/2021/a9c6cbe926.png" alt="" />￼
-To publish this outline, I run a Shortcut that uploads images and HTML to my <a href="https://micro.blog">Micro.blog</a> blog. Drummer works somewhat differently. Zavala considers and outline a document that gets uploaded as a post. Drummer is designed to group multiple entries under a published date. Each entry is a separate blog post, but are all grouped together by date. It also has a publish step, but what happens, happens behind the scenes.</p>
+To publish this outline, I run a Shortcut that uploads images and HTML to my <a href="https://micro.blog">Micro.blog</a> blog. Drummer works somewhat differently. Zavala considers an outline a document that gets uploaded as a post. Drummer is designed to group multiple entries under a published date. Each entry is a separate blog post, but are all grouped together by date. It also has a publish step, but what happens, happens behind the scenes.</p>
 
 <p><img src="https://vincode.io/uploads/2021/328aa1ad88.png" alt="" />￼
 It is important here to point out some terminology differences. A “note” in Zavala is associated with a row. It provides additional detail for the topic. When publishing docs or blog posts from Zavala a topic is a group heading and a note is paragraph text.</p>
