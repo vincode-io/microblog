@@ -7,6 +7,14 @@
 	"items": [
 		
 			{
+				"id": "http://vincode.micro.blog/2022/01/31/zavala-is-a.html",
+				
+				"content_html": "<p>Zavala is a modern outliner for Mac, iPhone, and iPad. Version 2.0 has just been release with a refined user interface and support for Shortcuts. <a href=\"https://zavala.vincode.io/2022/01/31/2.0_Release.html\">Read all about the 2.0 release.</a></p>\n",
+				"content_text": "Zavala is a modern outliner for Mac, iPhone, and iPad. Version 2.0 has just been release with a refined user interface and support for Shortcuts. [Read all about the 2.0 release.](https://zavala.vincode.io/2022/01/31/2.0_Release.html)\n",
+				"date_published": "2022-01-31T16:08:50-08:00",
+				"url": "https://vincode.io/2022/01/31/zavala-is-a.html"
+			},
+			{
 				"id": "http://vincode.micro.blog/2021/12/17/this-is-awesome.html",
 				
 				"content_html": "<p>This is awesome: <a href=\"https://blog.iconfactory.com/2021/12/notches-gone-wild/\">blog.iconfactory.com/2021/12/n&hellip;</a></p>\n",
